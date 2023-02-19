@@ -3,12 +3,12 @@ const dotenv = require('dotenv')
 const path = require('path')
 const cors = require('cors')
 const morgan = require('morgan')
-const connectDB = require('./config/db')
-const { notFound, errorHandler } = require('./middleware/errorMiddleware')
+const connectDB = require('./backend/config/db')
+const { notFound, errorHandler } = require('./backend/middleware/errorMiddleware')
 
-const userRouters = require('./routes/userRoutes')
-const uploadRoutes = require('./routes/uploadRoutes')
-const uploadFiles = require('./routes/fileRoutes')
+const userRouters = require('./backend/routes/userRoutes')
+const uploadRoutes = require('./backend/routes/uploadRoutes')
+const uploadFiles = require('./backend/routes/fileRoutes')
 
 dotenv.config()
 
