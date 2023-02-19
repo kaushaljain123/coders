@@ -13,7 +13,7 @@ export const login = (email, password, batchCode) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('http://157.245.252.197:3001/api/users/signin', { email, password, batchCode }, config)
+        const { data } = await axios.post('http://206.189.141.77:3002/api/users/signin', { email, password, batchCode }, config)
 
         dispatch({
             type: USER_LOGIN_SUCCESS,
@@ -49,7 +49,7 @@ export const register = (name, email, password, mobile, batchCode) => async (dis
             }
         }
 
-        const { data } = await axios.post('http://157.245.252.197:3001/api/users', { name, email, password, mobile, batchCode }, config)
+        const { data } = await axios.post('http://206.189.141.77:3002/api/users', { name, email, password, mobile, batchCode }, config)
 
         dispatch({
             type: USER_REGISTER_SUCCESS,
