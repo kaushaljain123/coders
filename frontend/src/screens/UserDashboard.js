@@ -9,7 +9,7 @@ const UserDashboard = () => {
     const [data, setData] = useState([]);
     const userInfo = JSON.parse(localStorage.getItem('userInfo'))
     useEffect(() => {
-        axios.post('http://206.189.141.77:3002/api/files', { batchCode: userInfo.batchCode })
+        axios.post('http://206.189.141.77/api/files', { batchCode: userInfo.batchCode })
             .then(response => setData(response.data.data))
 
             .catch(error => console.log(error));
@@ -25,7 +25,7 @@ const UserDashboard = () => {
                     </h1>
 
                     <div class="files">
-                        <a href={"http://206.189.141.77:3002" + item.files} class="download-link html" download>{item.folderName}<img src={download} width="15" height="15" /></a>
+                        <a href={"http://206.189.141.77" + item.files} class="download-link html" download>{item.folderName}<img src={download} width="15" height="15" /></a>
                     </div>
                 </div>
             ))}

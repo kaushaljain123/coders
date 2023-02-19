@@ -13,7 +13,7 @@ export const fileUpload = (batchCode, tags, files, folderName) => async (dispatc
             }
         }
 
-        const { data } = await axios.post('http://206.189.141.77:3002/api/files/uploadFolder', { batchCode, tags, files, folderName }, config)
+        const { data } = await axios.post('http://206.189.141.77/api/files/uploadFolder', { batchCode, tags, files, folderName }, config)
 
         dispatch({
             type: FILE_UPLOAD_SUCCESS,
@@ -42,7 +42,7 @@ export const fileList = (batchCode) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('http://206.189.141.77:3002/api/files', { batchCode }, config)
+        const { data } = await axios.post('http://206.189.141.77/api/files', { batchCode }, config)
 
         dispatch({
             type: FILE_LIST_SUCCESS,

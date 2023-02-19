@@ -25,7 +25,7 @@ const Files = () => {
                 },
             };
             const { data } = await axios.post(
-                "http://206.189.141.77:3002/api/upload",
+                "http://206.189.141.77/api/upload",
                 formData,
                 config
             );
