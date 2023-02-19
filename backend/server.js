@@ -23,6 +23,10 @@ if (process.env.NODE_ENV == 'development') {
 app.use(express.json())
 app.use(cors({ origin: '*' }))
 
+
+app.get('/', (req, res) => {
+  res.send('Api is running,,,,')
+})
 app.use('/api/users', userRouters)
 app.use('/api/upload', uploadRoutes)
 app.use('/api/files', uploadFiles)
