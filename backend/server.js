@@ -28,18 +28,18 @@ app.use('/api/users', userRouters)
 app.use('/api/upload', uploadRoutes)
 app.use('/api/files', uploadFiles)
 
-app.use
-
 var __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 if (process.env.NODE_ENV === 'production') {
+  console.log(1);
   app.use(express.static(path.join(__dirname, '/frontend/build')))
 
   app.get('*', (req, res) =>
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
   )
 } else {
+  console.log();
   app.get('/', (req, res) => {
     res.send('API is running....')
   })
