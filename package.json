@@ -1,0 +1,40 @@
+{
+  "name": "bringonn.coders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server"
+  },
+  "author": "Kaushal Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myofflinemarket/shriswastika/issues"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.0",
+    "exceljs": "^4.3.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "formidable": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "mongoose": "^6.2.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.7.7",
+    "paytmchecksum": "^1.5.0",
+    "read-excel-file": "^5.4.2",
+    "slugify": "^1.6.5",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20"
+  }
+}
