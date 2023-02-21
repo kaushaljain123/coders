@@ -171,6 +171,7 @@ button {
   padding: 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
 }
 
 .admin-download-section {
@@ -178,6 +179,7 @@ button {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   position: relative;
+  column-gap: 20px;
 }
 
 .card {
