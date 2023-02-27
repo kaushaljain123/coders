@@ -1,11 +1,12 @@
 import React from 'react'
-import { Spinner } from 'react-bootstrap'
+import loader from '../images/inkloading.gif'
 
 const Loader = () => {
+
   return (
-    <Spinner animation='grow' role='status' style={{ width : '100px', height: '100px', margin: 'auto', display: 'block' }}>
-        <span className='sr-only'>Loading...</span>
-    </Spinner>
+    <div class="loader">
+      <img src={loader} />
+    </div>
   )
 }
 

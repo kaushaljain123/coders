@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../actions/userActions";
+import Loader from "../components/Loader";
 
 const LoginScreen = ({ location, history }) => {
     const [email, SetEmail] = useState("");
@@ -25,7 +26,7 @@ const LoginScreen = ({ location, history }) => {
     return (
         <>
             {error && error.message}
-            {loading ? 'loading...' : (
+            {loading ? <Loader /> : (
                 <>
                     <div className="background">
                         <div className="shape"></div>
@@ -35,15 +36,15 @@ const LoginScreen = ({ location, history }) => {
                         <h3>Bringonn.Coders</h3>
 
                         <label for="username">Username</label>
-                        <input type="email" placeholder="Email" value={email}
+                        <input className="inputForm" type="email" placeholder="Email" value={email}
                             onChange={(e) => SetEmail(e.target.value)} />
 
                         <label for="username">Batch code</label>
-                        <input type="text" placeholder="Enter batch code" value={batchCode}
+                        <input className="inputForm" type="text" placeholder="Enter batch code" value={batchCode}
                             onChange={(e) => SetBatchCode(e.target.value)} />
 
                         <label for="password">Password</label>
-                        <input type="password" placeholder="Password" value={password}
+                        <input className="inputForm" type="password" placeholder="Password" value={password}
                             onChange={(e) => SetPassword(e.target.value)} />
 
                         <button>Log In</button>

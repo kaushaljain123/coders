@@ -6,6 +6,7 @@ import UserDashboard from './screens/UserDashboard';
 import Student from './screens/Students';
 import AddStudent from './screens/AddStudent';
 import Files from './screens/Files';
+import QuizScreen from './screens/QuizScreen';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/students' component={Student} exact />
           <Route path='/add-students' component={AddStudent} exact />
           <Route path='/files' component={Files} exact />
+          <Route path='/test' component={QuizScreen} exact />
         </>
       ) : (
         <>

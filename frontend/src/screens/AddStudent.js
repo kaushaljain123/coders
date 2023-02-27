@@ -26,15 +26,15 @@ const AddStudent = ({ location, history }) => {
             <div class="admin-download-section">
                 <div class="admin-card">
                     <form className='register-form' onSubmit={submitHandler}>
-                        <input type="text" placeholder='Enter Name' value={name}
+                        <input className='inputForm' type="text" placeholder='Enter Name' value={name}
                             onChange={(e) => setName(e.target.value)} />
-                        <input type="text" placeholder='Enter Email' value={email}
+                        <input className='inputForm' type="text" placeholder='Enter Email' value={email}
                             onChange={(e) => setEmail(e.target.value)} />
-                        <input type="text" placeholder='Enter Number' value={number}
+                        <input className='inputForm' type="text" placeholder='Enter Number' value={number}
                             onChange={(e) => setNumber(e.target.value)} />
-                        <input type="text" placeholder='Enter Password' value={password}
+                        <input className='inputForm' type="text" placeholder='Enter Password' value={password}
                             onChange={(e) => setPassword(e.target.value)} />
-                        <input type="text" placeholder='Enter Batch Code' value={batchCode}
+                        <input className='inputForm' type="text" placeholder='Enter Batch Code' value={batchCode}
                             onChange={(e) => setBatchCode(e.target.value)} />
                         <button>SAVE</button>
                     </form>

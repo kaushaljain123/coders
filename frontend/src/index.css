@@ -86,7 +86,7 @@ label {
   font-weight: 500;
 }
 
-input {
+.inputForm {
   display: block;
   height: 50px;
   width: 100%;
@@ -98,6 +98,10 @@ input {
   font-weight: 300;
   color: #fff;
 }
+
+.checkBox {}
+
+
 
 ::placeholder {
   color: #e5e5e5;
@@ -168,10 +172,11 @@ button {
 }
 
 .download-section {
-  padding: 30px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
+  display: flex;
+  /* gap: 10px; */
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .admin-download-section {
@@ -179,6 +184,7 @@ button {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   position: relative;
+  margin: auto 0;
   column-gap: 20px;
 }
 
@@ -307,4 +313,43 @@ button {
 
 .file-upload-section {
   padding: 30px;
+}
+
+/* Quiz Section */
+
+.quiz-section {
+  width: 1200px;
+  margin: 40px auto;
+}
+
+.bold-test {
+  font-weight: 700;
+  color: #e34c26;
+}
+
+.test-rule {
+  padding: 0 20px !important;
+  margin: 20px 0;
+}
+
+.test-rule p {
+  font-size: 20px;
+}
+
+.condition-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loader img {
+  width: 25%;
+  margin: auto;
 }
