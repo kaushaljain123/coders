@@ -12,7 +12,7 @@ const QuizScreen = () => {
 
     const userInfo = JSON.parse(localStorage.getItem('userInfo'))
     useEffect(() => {
-        axios.post('http://localhost/api/test/findTest', { batchCode: userInfo.batchCode })
+        axios.post('http://206.189.141.77/api/test/findTest', { batchCode: userInfo.batchCode })
             .then(response => {
                 setLoading(false)
                 setTestData(response.data.data)

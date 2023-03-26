@@ -15,7 +15,7 @@ const Questions = ({ match }) => {
 
     useEffect(() => {
 
-        axios.post('http://localhost/api/question/getQuestions', { testId: match.params.id, userId: userInfo._id })
+        axios.post('http://206.189.141.77/api/question/getQuestions', { testId: match.params.id, userId: userInfo._id })
             .then(response => {
                 setLoading(false)
                 setCompleteData(response.data.data[0])
@@ -40,7 +40,7 @@ const Questions = ({ match }) => {
 
     const finalSubmit = () => {
         setLoading(true)
-        axios.post('http://localhost/api/question/submitAnswerAndCheckResult', { testId: match.params.id, userId: userInfo._id, questionsList: data })
+        axios.post('http://206.189.141.77/api/question/submitAnswerAndCheckResult', { testId: match.params.id, userId: userInfo._id, questionsList: data })
             .then(response => {
                 setLoading(false)
                 setResult(response.data.data)
