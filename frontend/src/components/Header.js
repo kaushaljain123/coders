@@ -34,7 +34,7 @@ const Header = () => {
             <li>Projects</li>
             <li>Notes</li>
             <li>Questions</li>
-            <li>Quiz</li>
+            <Link className="links" to='/test'><li>Test</li></Link>
           </ul>
         )}
 

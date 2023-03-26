@@ -9,6 +9,8 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware')
 const userRouters = require('./routes/userRoutes')
 const uploadRoutes = require('./routes/uploadRoutes')
 const uploadFiles = require('./routes/fileRoutes')
+const questionRoutes = require('./routes/questionRoutes')
+const testRoutes = require('./routes/testRoutes')
 
 dotenv.config()
 
@@ -27,6 +29,8 @@ app.use(cors({ origin: '*' }))
 app.use('/api/users', userRouters)
 app.use('/api/upload', uploadRoutes)
 app.use('/api/files', uploadFiles)
+app.use('/api/test', testRoutes)
+app.use('/api/question', questionRoutes)
 
 var __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
